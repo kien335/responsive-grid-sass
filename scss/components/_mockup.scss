@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.page-example {
+    position: absolute;
+    opacity: v.$example-opacity;
+    width: auto;
+    left: v.$example-left;
+    right: v.$example-right;
+}
+
+.sidebar-link {
+    @include m.blue-placeholder(15%, v.$sidebar-gap);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sidebar-block {
+    @include m.blue-placeholder(92%);
+}
+
+.gridcontainer--overlay {
+    opacity: v.$overlay-opacity;
+
+    .gridcontent {
+        background-color: v.$white;
+        border-right: 1px solid v.$guide-border-color;
+
+        &:first-child {
+            border-left: 1px solid v.$guide-border-color;
+        }
+    }
+}

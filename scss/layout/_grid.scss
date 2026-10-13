@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.gridwrapper {
+    overflow: auto;
+    position: relative;
+    height: v.$grid-default-height;
+
+    &--header { height: v.$grid-header-height; }
+    &--body { height: v.$grid-body-height; }
+    &--footer { height: v.$grid-footer-height; }
+    &--guides { height: v.$grid-guides-height; }
+}
+
+.gridcontent {
+    @include m.grid-cell();
+
+    &--full {
+        width: 100%;
+        border-right-color: transparent;
+    }
+
+    &--header { background-color: v.$header-color; }
+    &--footer { background-color: v.$footer-color; }
+
+    &--sidebar {
+        width: v.$side-column-width;
+        padding-top: v.$sidebar-top-padding;
+        background-color: v.$white;
+        border: none;
+    }
+
+    &--gutter {
+        background-color: v.$white;
+        border: none;
+    }
+}

@@ -1,0 +1,89 @@
+/* CSS biên dịch tương ứng với scss/main.scss. Có thể tạo lại bằng sass.cmd scss/main.scss styles.css --no-source-map */
+* {
+  box-sizing: border-box;
+}
+
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+}
+.gridwrapper--header {
+  height: 90px;
+}
+.gridwrapper--body {
+  height: 230px;
+}
+.gridwrapper--footer {
+  height: 50px;
+}
+.gridwrapper--guides {
+  height: 370px;
+}
+
+.gridcontent {
+  width: 8.33%;
+  margin: 0;
+  border-right: 1px solid grey;
+  height: 100%;
+  float: left;
+  background-color: #f1f1f1;
+}
+.gridcontent--full {
+  width: 100%;
+  border-right-color: transparent;
+}
+.gridcontent--header {
+  background-color: #9933cc;
+}
+.gridcontent--footer {
+  background-color: #0099cc;
+}
+.gridcontent--sidebar {
+  width: 25%;
+  padding-top: 15px;
+  background-color: #ffffff;
+  border: none;
+}
+.gridcontent--gutter {
+  background-color: #ffffff;
+  border: none;
+}
+
+.page-example {
+  position: absolute;
+  opacity: 0.9;
+  width: auto;
+  left: 8px;
+  right: 10px;
+}
+
+.sidebar-link {
+  background-color: #33b5e5;
+  border: none;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+}
+.sidebar-link:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-block {
+  background-color: #33b5e5;
+  border: none;
+  width: 100%;
+  height: 92%;
+  margin-bottom: 0;
+}
+
+.gridcontainer--overlay {
+  opacity: 0.1;
+}
+.gridcontainer--overlay .gridcontent {
+  background-color: #ffffff;
+  border-right: 1px solid #000000;
+}
+.gridcontainer--overlay .gridcontent:first-child {
+  border-left: 1px solid #000000;
+}

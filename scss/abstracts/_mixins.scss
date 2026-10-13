@@ -1,0 +1,20 @@
+@use "variables" as v;
+
+// Các thanh màu xanh dùng chung trong sidebar.
+@mixin blue-placeholder($height, $bottom-gap: 0) {
+    background-color: v.$feature-color;
+    border: none;
+    width: 100%;
+    height: $height;
+    margin-bottom: $bottom-gap;
+}
+
+// Giữ phần cột giống nhau, chỉ thay kích thước/màu khi cần.
+@mixin grid-cell($width: v.$grid-column-width, $background: v.$grid-bg) {
+    width: $width;
+    margin: 0;
+    border-right: 1px solid v.$grid-border-color;
+    height: 100%;
+    float: left;
+    background-color: $background;
+}
